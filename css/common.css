@@ -1,0 +1,245 @@
+@charset 'utf-8';
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+}
+
+:root {
+  max-width: 1440px;
+  width: calc(100% - 4rem);
+  font-size: 16px;
+  margin: auto;
+}
+
+.hd {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: #144aaa;
+  z-index: 999;
+}
+
+.hd .logo {
+  width: 120px;
+  padding: 1rem 0;
+}
+
+.hd nav::before {
+  background-color: aliceblue;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: -500%;
+  width: 1000%;
+  height: 0px;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.hd nav:hover::before {
+  height: 160px;
+  opacity: 1;
+}
+
+.hd .gnb {
+  border: 1px solid blue;
+  display: flex;
+}
+
+.hd .gnb a {
+  display: block;
+  white-space: nowrap;
+}
+
+.hd .gnb > li {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.hd .gnb > li > a {
+  /* border: 1px solid orange; */
+  padding: 1rem 2rem;
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  font-size: 1.312rem;
+}
+
+.hd .sub {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  text-align: center;
+  transition: opacity 0.8s;
+  opacity: 0;
+  height: 0;
+}
+
+.hd .gnb > li:hover {
+  color: black;
+}
+
+.hd .gnb:hover .sub {
+  height: 160px;
+  opacity: 1;
+}
+
+.hd .sub a {
+  /* border: 1px solid lightgreen; */
+  padding: 0.5rem 2rem;
+  color: black;
+  font-size: 0.857rem;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.hd .sub a:hover {
+  color: #144aaa;
+}
+
+.hd .sub a::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0.3rem;
+  background-color: #144aaa;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.hd .sub a:hover::after {
+  opacity: 1;
+}
+
+.hd .func {
+  display: flex;
+}
+
+.hd .func a {
+  /* border: 1px solid lightgreen; */
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  position: relative;
+}
+
+.hd .func a::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: calc(100% - 2rem);
+  background-color: #144aaa;
+  opacity: 0;
+}
+
+.hd .func a:hover::before {
+  opacity: 1;
+}
+
+.inner {
+  border: 1px solid lightgray;
+  display: flex;
+  font-family: "GmarketSansMedium";
+  font-weight: 700;
+  color: #144aaa;
+  width: 100%;
+  align-items: center;
+}
+.inner p {
+  font-size: 1.875rem;
+  margin-bottom: 1.6rem;
+}
+.inner h2 {
+  font-size: 3.6875rem;
+  line-height: 4.5rem;
+  margin-right: 2rem;
+}
+
+.banner {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  background-color: #eff4fe;
+}
+.banner a {
+  font-family: "GmarketSansMedium";
+  font-size: 1.5625rem;
+  font-weight: bold;
+}
+.banner a:hover {
+  color: #144aaa;
+}
+.banner a::after {
+  content: "\f061";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  margin-left: 0.3rem;
+  transition: 0.3s;
+}
+.banner a:hover::after {
+  color: #144aaa;
+  margin-left: 1.2rem;
+}
+
+.space .title h3 {
+  font-family: "GmarketSansMedium";
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3.25rem;
+}
+.space .title p {
+}
+.space .list .gnb {
+  display: flex;
+}
+
+.ourCenter {
+  border: 1px solid lightskyblue;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.ourCenter .title {
+  white-space: nowrap;
+  flex: 1;
+}
+.ourCenter .title h3 {
+  font-family: "GmarketSansMedium";
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 3.25rem;
+}
+.ourCenter img {
+  width: 400px;
+  height: 400px;
+}
+.ourCenter a {
+  border: 1px solid #144aaa;
+  border-radius: 50%;
+  color: #144aaa;
+  font-size: 0.875rem;
+  font-weight: bold;
+  display: block;
+  padding: 2rem 1.5rem;
+}
+.ourCenter a:hover {
+  color: white;
+  background-color: #144aaa;
+  transition: 0.5s;
+}
